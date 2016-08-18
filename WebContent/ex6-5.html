@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var Rectangle = function( x1, y1, x2, y2, color ) {
+	this.x1 = x1;
+	this.y1 = y1;
+	this.x2 = x2;
+	this.y2 = y2;
+	this.color = color;
+}
+Rectangle.prototype.show = function() {
+	console.log( this.x1 + "," + 
+		this.y1 + "," + 
+		this.x2 + "," +
+		this.y2 + "," +
+		this.color );
+	
+	document.write( 
+
+"<div style='" +
+"position:absolute;" +
+"left:" + this.x1 + "px;" +
+"top:" + this.y1 + "px;" +
+"width:" + (this.x2 - this.x1) + "px;" +
+"height:" + (this.y2 - this.y1) + "px;" +
+"background-color:" + this.color + ";" +
+"'>" + 
+"</div>" );
+
+
+	
+}
+
+
+
+var rect1 = new Rectangle( 100, 100, 200, 200, "#00f" );
+var rect2 = new Rectangle( 500, 100, 600, 150, "#f00" );
+var rect3 = new Rectangle( 100, 500, 300, 750, "#0f0" );
+var rect4 = new Rectangle( 150, 200, 300, 750, "#ff0" );
+var rect5 = new Rectangle( 600, 700, 800, 950, "#000" );
+
+rect1.show();
+rect2.show();
+rect3.show();
+rect4.show();
+rect5.show();
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

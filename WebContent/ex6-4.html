@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/* function을 이용한 여러 객체 생성 방법*/
+var employee = function( name, title ){
+	this.name = name;
+	this.title = title;
+	this.info = function(){
+		console.log( this.name + ":" + this.title );
+	}
+}
+
+var e1 = new employee("둘리", "백수1");
+e1.info();
+
+var e2 = new employee("마이콜", "가수");
+e2.info();
+
+var e3 = new employee("도우넛", "백수2");
+e3.info();
+
+var e4 = new employee("도치", "백수3");
+e4.info();
+
+
+/* function을 이용한 여러 객체 생성 방법(prototype 기반의 객체 생성) */
+var employee2 = function( name, title ){
+	this.name = name;
+	this.title = title;
+}
+employee2.prototype.info = function() {
+	console.log( this.name + ":" + this.title );
+}
+employee2.prototype.boss = "고길동";
+
+var e1 = new employee2("둘리", "백수1");
+e1.info();
+
+var e2 = new employee2("마이콜", "가수");
+e2.info();
+
+var e3 = new employee2("도우넛", "백수2");
+e3.info();
+
+var e4 = new employee2("도치", "백수3");
+e4.info();
+/* 재정의 */
+e4.boss = "안대혁";
+e4.info = function() {
+	console.log( this.boss + ":" + this.name + ":" + this.title );
+}
+e4.info();
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

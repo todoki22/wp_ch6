@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// 문자열 배열로 접근
+var s = "Hello, I'm String";
+for( var i = 0; i < s.length; i++ ) {
+	console.log( s[i] );
+}
+
+// + 연산
+
+var s = "number";
+var v = "1";
+var v1 = 10;
+
+console.log( s + v );
+console.log( s + v1 );
+console.log( v1 + s );
+
+var v2 = "5";
+var v3 = 5;
+console.log( v2 + v3 );
+console.log( v3 + v2 );
+console.log( v3 == v2 );
+
+var s1 = "Hello javaScript";
+var s2 = "Hello javaScript";
+console.log( s1 == s2 );
+console.log( s1 === s2 );
+
+// indexOf
+var str = "string1 string2 string3";
+console.log( str.indexOf( "string2" ) );
+console.log( str.indexOf( "string22" ) );
+console.log( str.indexOf( "str" ) );
+
+//substr
+var str1 = str.substr( 8 );
+console.log( str1 );
+
+var str2 = str.substr( 8, 10 );
+console.log( str2 );
+
+//split
+var result = str.split( " " );
+console.log( result );
+
+//encoding escape, encodeURI, encodeURIComponent
+//a-z, A~Z, 0~9, *_+-
+// %78fc
+var str = "http://mysite.com/?stuff=\"안 대혁!&bar=10";
+console.log( escape(str) );
+console.log( encodeURI(str) );
+console.log( encodeURIComponent(str) );
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
